@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        /* ------------------------ main styles----------------------- */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clock {
+            text-align: center;
+            border: 3px solid whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        span {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: whitesmoke;
+            padding: 5px;
+            transition: all 1s;
+        }
+
+        #ampm {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<!-- -----------------body contents---------------- -->
+
+<body>
+    <section class="container">
+        <div class="date">
+            <span id="day"></span>
+            <span>,</span>
+            <span id="dates"></span>
+            <span>,</span>
+            <span id="month"></span>
+            <span>,</span>
+            <span id="year"></span>
+        </div>
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="mins">00</span>
+            <span>:</span>
+            <span id="secs">00</span>
+            <span id="ampm">AM</span>
+        </div>
+    </section>
+
+    <script>
+        // ------------------date class-------------------
+        let ampm = document.getElementById('ampm');
+        function displaytime() {
+            let date = new Date();
+            let hours = date.getHours();
+            let mins = date.getMinutes();
+            let secs = date.getSeconds();
+            let days = date.getDay();
+            let months = date.getMonth();
+            let year = date.getFullYear()
+            let day = document.getElementById('day')
+            let month = document.getElementById('month')
+            let dates = date.getDate()
+            // -----------------switch for days--------------
+            switch (days) {
+                case 0: day.innerHTML = "Sunday"; break;
+                case 1: day.innerHTML = "Monday"; break;
+                case 2: day.innerHTML = "Tuesday"; break;
+                case 3: day.innerHTML = "Wednesday"; break;
+                case 4: day.innerHTML = "Thursday"; break;
+                case 5: day.innerHTML = "friday"; break;
+                case 6: day.innerHTML = "saturday"; break;
+            }
+            // ---------------------switch for months--------------------------
+            switch (months) {
+                case 0: month.innerHTML = "January"; break;
+                case 1: month.innerHTML = "February"; break;
+                case 2: month.innerHTML = "March"; break;
+                case 3: month.innerHTML = "April"; break;
+                case 4: month.innerHTML = "May"; break;
+                case 5: month.innerHTML = "June"; break;
+                case 6: month.innerHTML = "July"; break;
+                case 7: month.innerHTML = "August"; break;
+                case 8: month.innerHTML = "September"; break;
+                case 9: month.innerHTML = "October"; break;
+                case 10: month.innerHTML = "November"; break;
+                case 11: month.innerHTML = "December"; break;
+            }
+            // -----------------------switch for alert messages--------------------------
+            switch (true) {
+                case (hours == 6 && mins == 0 && secs == 0):
+                    alert("Wake Up! It's 6:00 AM");
+                    break;
+
+                case (hours == 12 && mins == 0 && secs == 0):
+                    alert("It's 12:00 PM have your lunch");
+                    break;
+
+                case (hours == 17 && mins == 0 && secs == 0):
+                    alert("It's 5:00 PM go out and play");
+                    break;
+
+                case (hours == 22 && mins == 0 && secs == 0):
+                    alert("it's 10pm go to bed");
+                    break;
+
+                default:
+                    break;
+            }
+            // ----------------------12hrs clock structured-------------------------
+            if (hours > 12) {
+                hours = hours - 12;
+                ampm.textContent = 'PM';
+
+            }
+            else {
+                ampm.textContent = 'AM';
+
+            }
+            // -----------------------assigning to html elements--------------------------------
+            document.getElementById('dates').innerHTML = dates;
+            document.getElementById('year').innerHTML = year;
+            document.getElementById('hours').innerHTML = fixzero(hours);
+            document.getElementById('mins').innerHTML = fixzero(mins);
+            document.getElementById('secs').innerHTML = fixzero(secs);
+        }
+        setInterval(displaytime, 1000)
+        // ----------------------------fixing zero for two digits-----------------------
+            function fixzero(num) {
+                if (num < 10) {
+                    return '0' + num;
+                }
+                else {
+                    return num
+                }
+            }
+            // ----------------------backgroundcolor flicker---------------------
+        const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'e', 'f']
+        function toggleBackgroundColor() {
+            const body = document.body;
+
+            let hexcode = '#';
+            for (let i = 0; i < 6; i++) {
+                hexcode += randhexcolor()
+            }
+            body.style.background = hexcode;
+        }
+
+        function randhexcolor() {
+            let hexcolor = Math.floor(Math.random() * 16);
+            return hex[hexcolor]
+        }
+
+        setInterval(toggleBackgroundColor, 1000);
+
+    </script>
+</body>
+
+</html>
