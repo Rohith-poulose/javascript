@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>select a letter from my name</h1>
+    <input type="text" placeholder="enter your name" id="input">
+    <button onclick="letter();">roll</button>
+    <h1 id="result"></h1>
+    <script>
+        function letter(){
+            var str = document.getElementById("input").value;
+            var len = str.length;
+            var numbers = Math.floor(Math.random ()* len);
+            var letter = str.charAt(numbers)
+            let result = document.getElementById("result");
+            result.innerHTML = `your selected letter is "${letter}" and the index is "${numbers}"`;
+            console.log(numbers)
+            console.log(letter)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* .border{
+    width: 300px;
+    height: 600px;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 15%;
+    padding-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+.screen{
+    width: 290px;
+    height: 580px;
+    border-radius: 20px;
+    background-color: rgb(95, 104, 104);
+    
+}
+.header{
+    width:290px;
+    height: 10px;
+    background:transparent
+    border-radius:50px 70px 0px 0px ;
+   
+} */
+.textToSpeech{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(45deg,#24d8f8,#06fc9e,#21f305,#9cfc03);
+}
+h1{
+    text-transform: uppercase;
+    color: rgb(245, 5, 5);
+    text-shadow:5px 5px 10px  rgb(60, 131, 3);
+}
+textarea{
+    border-radius: 10px;
+    outline: none;
+    background-color: transparent;
+    border:none;
+    box-shadow: 0px 5px 10px;
+    padding: 10px;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 0px 0px 10px 0px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+button{
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: large;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    transition: 1s ease-in-out ;
+    
+}
+button:hover{
+    background-color: black;
+    color: white;
+}

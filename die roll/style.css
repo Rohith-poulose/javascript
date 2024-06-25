@@ -1,0 +1,43 @@
+h1{
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+button{
+    background-color: hsla(240, 100%, 50%, 0.4);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsla(240, 100%, 50%, 0.5);
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.6);
+    
+}
+button:active{
+    background-color: hsla(240, 100%, 50%, 0.6);
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.7);
+    transform: translateX(2px) translateY(2px); 
+}
+label{
+    font-size: 2em;
+    font-weight: bold;
+}
+#box{
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

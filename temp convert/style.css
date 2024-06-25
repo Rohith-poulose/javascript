@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: hsl(0, 0%, 90%);
+    
+}
+form{
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 350px;
+    margin: auto;
+    box-shadow:5px 5px 15px hsla(0, 0%, 0%, 0.3) ;
+
+}
+h1{
+    color: blue;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    padding: 5px;
+    text-align: center;
+    font-size:1em;
+    border: 2px solid hsla(0, 0%, 0%, 0.5);
+    border-radius: 10px;
+}
+input:focus{
+    outline: none;
+}
+label{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+button{
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    background-color: hsla(0, 100%, 50%, 0.4);
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsla(0, 100%, 50%,0.5)
+}
+p{
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

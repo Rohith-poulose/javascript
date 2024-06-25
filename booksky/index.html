@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booksky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b113d65810.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>booksky</h1>
+    </nav>
+    <div class="books">
+        <div class="container">
+            <h2>atomic habits</h2>
+            <h4>james clear</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, ratione soluta. Exercitationem,
+                laborum culpa quasi dolor possimus voluptatem voluptatibus ex!
+            </p>
+            <button onclick="deletebook(event)">delete</button>
+        </div>
+    </div>
+
+    <button onclick="popup()" class="popbtn">
+        <h1>add</h1>
+        <i class="fa-regular fa-circle-xmark"></i>
+    </button>
+
+    <div class="overlay">
+        <div class="popbox">
+            <h3>add book</h3>
+            <form class="items">
+                <input id="input1" type="text" placeholder="name of the book">
+                <input id="input2" type="text" placeholder="author of the book">
+                <textarea  id="content" cols="30" rows="10" placeholder="short note"></textarea>
+                <button id="addbtn" type="submit">add</button>
+                <button onclick="cancelbox(event)" >cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

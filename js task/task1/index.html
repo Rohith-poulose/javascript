@@ -1,0 +1,13 @@
+<input type="text"  id="box" onkeyup="module()">
+<h3 id="result"></h3>
+
+<script>
+    var box = document.getElementById("box")
+    var result = document.getElementById("result")
+
+    function module(){
+        var boxvalue = box.value
+        result.textContent=boxvalue
+    }
+
+</script>

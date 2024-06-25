@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roll</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #btn{
+            font-size: 2em;
+            padding: 5px 20px;
+            border-radius: 5px;
+            border: 2px dotted black;
+        }
+        #result{
+            font-size: 2em;
+            padding: 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">roll</button>
+    <p id="result1"></p>
+    <br>
+    <p id="result2"></p>
+    <br>
+    <p id="result3"></p>
+    <br>
+    <script>
+        let btn = document.getElementById("btn");
+        let result1 = document.getElementById("result1");
+        let result2 = document.getElementById("result2");
+        let result3 = document.getElementById("result3");
+
+        const max =6
+        const min =1
+
+        btn.onclick=function(){
+            let randomnum1 = Math.floor(Math.random()*max)+min;
+            let randomnum2 = Math.floor(Math.random()*max)+min;
+            let randomnum3 = Math.floor(Math.random()*max)+min;
+            result1.textContent=randomnum1
+            result2.textContent=randomnum2
+            result3.textContent=randomnum3
+        }
+    </script>
+</body>
+</html>

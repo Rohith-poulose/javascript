@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+
+<body>
+    <h1>check the number is palindrome</h1>
+    <input type="number" name="" id="inputbox">
+    <button onclick="update()">check</button>
+    <p id="result"></p>
+    <script>
+        function update() {
+            let boxvalue = document.getElementById("inputbox").value;
+            let result = document.getElementById("result");
+            
+            let reverse = boxvalue.toString().split("").reverse().join("");
+            if(boxvalue==reverse){
+                result.textContent = "it is a palindrome";
+            }
+            else{
+                result.textContent = "it is not a palindrome";
+            }
+        }
+    </script>
+</body>
+
+</html>

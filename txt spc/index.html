@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>java | rohith</title>
+    <link rel="stylesheet" href="styleind.css">
+</head>
+
+<body>
+    <!-- <div class="border">
+            <div class="screen">
+                <div class="header">
+                    <div class="left">
+                        <p style="color: white;">12:30 <span><i class="fa-brand fa-twitter"></i></span></p>
+                    </div>
+                    <div class="right">
+                        
+                    </div>
+                </div>
+                <div class="itemsLeft"></div>
+                <div class="itemsRight"></div>
+            </div>
+        </div> -->
+    <!-- <div class="textToSpeech">
+            <h1>lets hear!</h1>
+            <textarea  id="textToSpeak" cols="30" rows="10"></textarea>
+            <button type="button" onclick="textToSpeak()">convert</button>
+        </div>
+        <script>
+            const textToSpeech = document.getElementById("textToSpeak");
+            function textToSpeech(){
+                let speechObj = new SpeechSynthesisUtterance(textToSpeak.value);
+                window.speechSynthesis.speak(speechObj);
+            }
+        </script> -->
+    <div class="textToSpeech">
+        <h1>Let's hear!</h1>
+        <textarea id="textToSpeech" cols="25" rows="10"></textarea>
+        <div class="button">
+            <button type="button" id="buttonof1" onclick="convertTextToSpeech()">Convert</button>
+            <button onclick="stopConversion()">Stop</button>
+            <button onclick="clearTextarea()">clear</button>
+
+        </div>
+    </div>
+
+    <script>
+        let conversionStopped = false;
+
+        function convertTextToSpeech() {
+            conversionStopped = false;
+            const textToSpeak = document.getElementById("textToSpeech").value;
+            let speechObj = new SpeechSynthesisUtterance(textToSpeak);
+            window.speechSynthesis.speak(speechObj);
+            document.getElementById("buttonof1").textContent = "started";
+            setTimeout(() => {
+                document.getElementById("buttonof1").textContent = "Convert";
+            }, 1000);
+        }
+        function stopConversion(){
+            conversionStopped=true;
+        }
+        function clearTextarea() {
+            document.getElementById("textToSpeech").value = "";
+        }
+    </script>
+
+</body>
+
+</html>
+hello coder l
